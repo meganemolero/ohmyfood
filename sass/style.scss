@@ -1,5 +1,9 @@
 @import "Base/typography";
+@import "Base/boxsizing";
 @import "Pages/acceuil.scss";
 @import "Pages/restaurants.scss";
 @import "Layouts/footer";
 @import "Layouts/header";
+@import "Utils/mixins";
+@import "Utils/variables";
+
