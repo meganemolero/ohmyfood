@@ -5,7 +5,7 @@ header
     width:100%;
     & img
     {
-        width: 150px;
+        width: 170px;
         margin: auto;
         object-fit: cover;
         display: flex;
@@ -22,8 +22,15 @@ header
         {
             display: flex;
             justify-content: center;
-            background-color: #eaeaea;
+            background-color: $couleur_localisation;
             padding: 15px;
+            box-shadow: inset 0px 4px 2px #d3d3d3;
         }
+        & i
+        {
+            font-size: 17px;
+            margin-right: 20px;
+        }
+
     }
 }
