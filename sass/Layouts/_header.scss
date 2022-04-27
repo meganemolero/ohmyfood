@@ -1,9 +1,29 @@
-{  
 header
 {
     display: flex;
     flex-direction: column;
     width:100%;
-    
+    & img
+    {
+        width: 150px;
+        margin: auto;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+    .explorer
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+        &__localisation
+        {
+            display: flex;
+            justify-content: center;
+            background-color: #eaeaea;
+            padding: 15px;
+        }
+    }
 }
-} 
