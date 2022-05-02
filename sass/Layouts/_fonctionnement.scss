@@ -2,4 +2,26 @@
 {
     display: flex;
     width: 100%;
+    font-family: $police_textes;
+    h2 
+    {
+        font-size: 23px;
+        margin-left: 20px;
+    }
+    .fonctionnement__selecteurs
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        & __selecteurs__action
+        {
+            display: flex;
+            background-color:#f6f6f6 ;
+            .numerotation
+            {
+                background-color: $couleur_principale;
+                font-size: 22px;
+            }
+        }
+    }
 }
