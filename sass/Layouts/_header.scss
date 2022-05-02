@@ -19,7 +19,7 @@ header
         flex-direction: column;
         width: 100%;
         margin: auto;
-        &__localisation
+        .explorer__localisation
         {
             display: flex;
             justify-content: center;
@@ -27,15 +27,15 @@ header
             padding: 15px;
             box-shadow: inset 0px 4px 2px #d3d3d3;
         }
-        & i
+        i
         {
             font-size: 17px;
             margin: 0px 0px 0px 80px;
         }
-        &__reservation
+        .explorer__reservation
         {
             display: flex;
-            &__menu
+            .explorer__reservation__menu
             {
                 display: flex;
                 flex-direction: column;

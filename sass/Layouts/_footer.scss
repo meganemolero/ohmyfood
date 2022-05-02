@@ -1,0 +1,24 @@
+.footer__contain
+    {
+        display: flex;
+        flex-direction: column;
+        background-color: #353535;
+        color: white;
+        
+    h4     
+        {
+            font-family: $police_titres;
+            font-size: 25px;
+            margin: 20px 0 10px 30px;
+        }
+    .footer__contain__list
+        {
+        list-style-type: none;
+        font-family: $police_textes;
+        a 
+        {
+            text-decoration: none;
+            color: white;
+        }
+        }
+    }
