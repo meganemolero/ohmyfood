@@ -2,24 +2,27 @@
 {
     display: flex;
     flex-direction: column;
+    max-width: 375px;
     width: 100%;
     font-family: $police_textes;
+    margin: 20px;
     h2 
     {
         font-size: 23px;
-        margin-left: 20px;
-        text-align: left;
+        margin-left: 15px;
+        font-weight: bold;
     }
     .fonctionnement__selecteurs
     {
         display: flex;
-        flex-direction: column;
         width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
         .fonctionnement__selecteurs__action
         {
             display: flex;
+            padding: 10px;
             width: 100%;
-            margin: 20px;
             justify-content: baseline;
             align-items: baseline;
             border-radius: 20px;
@@ -37,8 +40,8 @@
                 align-items: center;
                 padding: 5px;
                 color: white;
-                width: 20px;
-                height: 20px;
+                width: 22px;
+                height: 22px;
                 margin-right: -13px;
                 position: relative;
             }
@@ -46,12 +49,12 @@
             {
                 background-color: #f6f6f6;
                 display: flex;
-                width: 80%;
+                width: 90%;
                 justify-content: flex-start;
                 align-items: center;
                 border-radius: 20px;
                 box-shadow: 5px 5px 10px #e7e7e7;
-                padding: 15px 0 15px 0;
+                padding: 15px 20px 15px 0px;
                 i 
                 {
                     color: #7e7e7e;
@@ -59,23 +62,15 @@
                     font-size: 18px;
                 }
             }
-            .symbole_et_intitulé_3
+            .symbole_et_intitulé:hover
             {
-                background-color: #f5edff;
-                display: flex;
-                width: 80%;
-                justify-content: flex-start;
-                align-items: center;
-                border-radius: 20px;
-                box-shadow: 5px 5px 10px #e7e7e7;
-                padding: 15px 0 15px 0;
+                background-color: $couleur_hover_fonctionnement;
+                i 
+                {
+                    color:$couleur_principale;
+                }
             }
-                .action__eat
-                    {
-                        color: $couleur_principale;
-                        margin: 0 20px 0 30px;
-                        font-size: 18px;
-                    }
+            
                 
         }
     }
