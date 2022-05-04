@@ -1,28 +1,31 @@
 #restaurants
 {
     display: flex;
+    width: 99%;
     flex-direction: column;
-    width: 100%;
     background-color: #f6f6f6;
     font-family: $police_textes;
+    margin: 0;
     h2 
     {
         font-size: 23px;
-        margin-left: 20px;
+        padding-left: 20px;
     }
     .differents__restaurants
     {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        padding-left: 20px;
+        
         a 
         {
             text-decoration: none;
             color: black;
             display: flex;
             width: 95%;
+            max-width: 700px;
             height: 250px;
-            margin-bottom: 15px;
+            margin: 0 0px 15px 0px;
             .differents__restaurants__new
                 {
                     background-color: $couleur_tertiaire;
@@ -41,7 +44,7 @@
                 align-items: center;
                 border-radius: 30px;
                 width: 100%;
-                margin: 10px;
+                
                 img 
                 {
                     width: 100%;
@@ -64,7 +67,7 @@
                         justify-content: flex-start;
                         margin-left: 15px;
                         height: 100%;
-                        width: 80%;
+                        width: 90%;
                         h3 
                         {
                             font-size: 15px;
@@ -84,16 +87,17 @@
                         justify-content: flex-end;
                         align-items: center;
                         font-size: 25px;
+                        width: 10%;
                         .plein
                         {
                             opacity: 0;
                         }
-                        
+                    }    
                         
 
                         
                         
-                    }
+                    
                 }   
             }
         }
