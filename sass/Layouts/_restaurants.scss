@@ -1,7 +1,7 @@
 #restaurants
 {
     display: flex;
-    width: 99%;
+    width: 100%;
     flex-direction: column;
     background-color: #f6f6f6;
     font-family: $police_textes;
@@ -15,14 +15,12 @@
     {
         display: flex;
         flex-wrap: wrap;
-        padding-left: 20px;
-        
         a 
         {
             text-decoration: none;
             color: black;
             display: flex;
-            width: 95%;
+            width: 100%;
             max-width: 700px;
             height: 250px;
             margin: 0 0px 15px 0px;
