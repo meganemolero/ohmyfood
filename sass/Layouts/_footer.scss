@@ -12,7 +12,7 @@
             margin: 20px 0 10px 30px;
         }
     .footer__contain__list
-        {
+    {
         list-style-type: none;
         font-family: $police_textes;
         a 
@@ -20,5 +20,19 @@
             text-decoration: none;
             color: white;
         }
+        .footer__logo
+        {
+            margin-right: 11px;
         }
+        li 
+        {
+            margin-top: 8px;
+        }
+        .list__logo2 a 
+        {
+            margin-left: -4px;
+        }
+       
+        
     }
+}
