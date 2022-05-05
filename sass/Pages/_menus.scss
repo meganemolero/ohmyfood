@@ -7,4 +7,95 @@
     border-radius: 30px 30px 0 0;
     margin-top: -35px;
     background-color: $couleur_arriere_plan;
+    .menu__nom-restaurant
+    {
+        display: flex;
+        width: 100%;
+        align-items: baseline;
+        justify-content: space-between;
+        h1 
+        {
+            font-family: $police_titres;
+            font-size: 28px;
+            margin: 20px 30px 0 20px;
+        }
+        i
+        {
+          font-size: 25px;  
+        }
+        .plein
+        {
+            opacity:0;
+        }   
+    }
+    .entrees, .plats, .desserts
+    {
+        font-family: $police_textes;
+        width: 95%;
+        
+        .title
+        {
+            h2 
+            {
+            font-size: 18px;
+            font-weight: 200;
+            margin-bottom: 5px;
+            }
+            .underline
+            {
+            background-color: $couleur_tertiaire;
+            width: 45px;
+            height: 3px;
+            }
+        }
+        .menus
+        {
+            display: flex;
+            flex-direction: column;
+            
+            .menus-detailles
+            {
+                display: flex;
+                background-color: white;
+                border-radius: 20px;
+                width: 100%;
+                max-width: 678px;
+                height: 70px;
+                margin-top: 20px;
+                .menus-detailles__name
+                {
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    margin: 10px 0px 10px 15px;
+                    width: 85%;
+                    text-overflow: ellipsis;
+                    h3 
+                    {
+                        margin: 0;
+                        font-size: 16px;
+                    }
+                    p 
+                    {
+                        margin-top: 5px;
+                        font-size: 15px;
+                    }
+                }
+                .menus-detailles__price
+                {
+                    width: 15%;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin: 35px 15px 15px 0px;
+                }
+                
+            }
+            .bouton_de_commande button
+            {
+              margin-top: 30px;  
+            }
+         
+        }
+    }
 }
