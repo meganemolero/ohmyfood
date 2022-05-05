@@ -18,4 +18,35 @@
    display: flex;
    justify-content: center;
 }
+@mixin coeur_plein
+{
+   background-color: linear-gradient($couleur_principale,$couleur_secondaire);
+   border: none;
+}
+@mixin checkbox
+{
+   background-color: $couleur_tertiaire;
+   width:15%;
+   border-radius: 0 20px 20px 0;
+}
+@mixin icone_checkbox
+{
+   background-color: transparent;
+   color:white;
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   padding: 25px;
+}
+@mixin menus_detailles
+{
+   display: flex;
+   background-color: white;
+   border-radius: 20px;
+   width: 100%;
+   max-width: 600px;
+   height: 70px;
+   margin-top: 20px;
+}
+
 
