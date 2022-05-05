@@ -32,7 +32,6 @@
     {
         font-family: $police_textes;
         width: 95%;
-        
         .title
         {
             h2 
@@ -52,16 +51,9 @@
         {
             display: flex;
             flex-direction: column;
-            
             .menus-detailles
             {
-                display: flex;
-                background-color: white;
-                border-radius: 20px;
-                width: 100%;
-                max-width: 678px;
-                height: 70px;
-                margin-top: 20px;
+                @include menus_detailles;
                 .menus-detailles__name
                 {
                     display: flex;
@@ -89,13 +81,27 @@
                     justify-content: flex-end;
                     margin: 35px 15px 15px 0px;
                 }
-                
+                .menus-detailles__slide
+                {
+                    @include checkbox;
+                    display: none;
+                    i 
+                    {
+                        @include icone_checkbox;
+                    }
+                }
+                .menus-detailles__slide:active
+                {
+                    @include checkbox;
+                }
             }
-            .bouton_de_commande button
+            .bouton_de_commande
             {
-              margin-top: 30px;  
+              display: flex;
+              justify-content: center;
+              align-items: center; 
+              margin-top: 30px;
             }
-         
         }
     }
 }
