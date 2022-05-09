@@ -1,9 +1,43 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
 
 /*Couleurs*/
 /*Polices*/
+.footer__contain {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+}
+.footer__contain h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 25px;
+  margin: 20px 0 5px 30px;
+}
+.footer__contain .footer__contain__list {
+  list-style-type: none;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.footer__contain .footer__contain__list a {
+  text-decoration: none;
+  color: white;
+  margin-right: 80px;
+}
+.footer__contain .footer__contain__list .footer__logo {
+  margin-right: 10px;
+}
+.footer__contain .footer__contain__list li {
+  margin-top: 8px;
+}
+.footer__contain .footer__contain__list .list__logo2 a {
+  margin-left: -4px;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -25,7 +59,7 @@ header .explorer {
   width: 100%;
   margin: auto;
 }
-header .explorer__localisation {
+header .explorer .explorer__localisation {
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
@@ -36,23 +70,20 @@ header .explorer i {
   font-size: 17px;
   margin: 0px 0px 0px 80px;
 }
-header .explorer__reservation {
-  display: flex;
-}
-header .explorer__reservation__menu {
+header .explorer .explorer__reservation {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
 }
-header .explorer__reservation__menu h1 {
+header .explorer .explorer__reservation h1 {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  margin: 25px 50px 15px 50px;
+  margin: 25px 65px 15px 65px;
 }
-header .explorer__reservation__menu p {
+header .explorer .explorer__reservation p {
   font-size: 19px;
   font-weight: 500;
   text-align: center;
@@ -64,6 +95,11 @@ body {
   width: 100%;
   margin: 0;
 }
+body main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
 
 .explorer input {
   border: none;
@@ -72,30 +108,72 @@ body {
   color: black;
   opacity: 1;
   font-size: 17px;
-  margin-left: 30px;
+  margin-left: 20px;
 }
 
 .fonctionnement {
   display: flex;
+  flex-direction: column;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  padding: 10px;
 }
 .fonctionnement h2 {
   font-size: 23px;
-  margin-left: 20px;
+  padding-left: 15px;
+  font-weight: bold;
 }
 .fonctionnement .fonctionnement__selecteurs {
   display: flex;
-  flex-direction: column;
   width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.fonctionnement .fonctionnement__selecteurs __selecteurs__action {
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action {
   display: flex;
-  background-color: #f6f6f6;
+  padding: 10px;
+  width: 100%;
+  max-width: 470px;
+  align-items: baseline;
+  border-radius: 20px;
 }
-.fonctionnement .fonctionnement__selecteurs __selecteurs__action .numerotation {
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action p {
+  font-weight: 700;
+}
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .numerotation {
   background-color: #9356DC;
-  font-size: 22px;
+  font-size: 13px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: white;
+  width: 22px;
+  height: 22px;
+  margin-right: -13px;
+  position: relative;
+}
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé {
+  background-color: #f6f6f6;
+  display: flex;
+  width: 90%;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #e7e7e7;
+  padding: 15px 20px 15px 0px;
+}
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé i {
+  color: #7e7e7e;
+  margin: 0 20px 0 30px;
+  font-size: 18px;
+}
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé:hover {
+  background-color: #f5edff;
+}
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé:hover i {
+  color: #9356DC;
 }
 
 .explorer__reservation button {
@@ -105,6 +183,7 @@ body {
   padding: 15px 20px 15px 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 60px;
   box-shadow: 0 0 16px grey;
 }
@@ -117,58 +196,243 @@ body {
   justify-content: center;
 }
 
+.bouton_de_commande button {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 30px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  box-shadow: 0 0 16px grey;
+}
+.bouton_de_commande button a {
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
 #restaurants {
   display: flex;
   width: 100%;
+  flex-direction: column;
   background-color: #f6f6f6;
   font-family: "Roboto", sans-serif;
+  margin: 0;
 }
 #restaurants h2 {
   font-size: 23px;
-  margin-left: 20px;
+  padding-left: 20px;
 }
 #restaurants .differents__restaurants {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: space-between;
-}
-#restaurants .differents__restaurants__new {
-  background-color: #99E2D0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 10px;
-  color: #088c6c;
-  font-weight: 600;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #restaurants .differents__restaurants a {
   text-decoration: none;
   color: black;
+  display: flex;
+  width: 100%;
+  max-width: 700px;
+  height: 16em;
+  margin: 0px 0px 15px 0px;
+}
+#restaurants .differents__restaurants a .differents__restaurants__new {
+  background-color: #99E2D0;
+  padding: 8px 13px;
+  color: #088c6c;
+  font-weight: 600;
+  border-radius: 5px;
+  position: absolute;
+  align-self: flex-start;
 }
 #restaurants .differents__restaurants a figure {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  width: 90%;
-  height: 300px;
+  width: 100%;
 }
 #restaurants .differents__restaurants a figure img {
   width: 100%;
-  height: 80%;
+  height: 72%;
   border-radius: 30px 30px 0 0;
   -o-object-fit: cover;
      object-fit: cover;
 }
 #restaurants .differents__restaurants a figure figcaption {
   background-color: white;
-  border: 0 0 30px 30px;
+  border-radius: 0 0 30px 30px;
   width: 100%;
-  height: 20%;
+  height: 28%;
+  display: flex;
+  justify-content: flex-start;
+}
+#restaurants .differents__restaurants a figure figcaption .cartes__restaurants__name {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-left: 15px;
+  height: 100%;
+  width: 90%;
+}
+#restaurants .differents__restaurants a figure figcaption .cartes__restaurants__name h3 {
+  font-size: 16px;
+  height: 50%;
+  margin: 10px 0 -10px 0;
+}
+#restaurants .differents__restaurants a figure figcaption .cartes__restaurants__name p {
+  font-size: 16px;
+  height: 50%;
+  margin: 0;
+}
+#restaurants .differents__restaurants a figure figcaption .cartes__restaurants__like {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 25px;
+  width: 10%;
+}
+#restaurants .differents__restaurants a figure figcaption .cartes__restaurants__like .plein {
+  opacity: 0;
+}
+
+.menus {
+  width: 100%;
+  margin: 0;
+}
+
+.retour_acceuil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  margin: 0;
+}
+.retour_acceuil a {
+  text-decoration: none;
+  color: black;
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+.retour_acceuil a i {
+  margin-left: 0;
+}
+
+.photo_background {
+  width: 100%;
+  margin: 0;
+}
+.photo_background img {
+  width: 100%;
+  min-width: 360px;
+  height: 90%;
+  max-height: 300px;
+  margin: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  border-radius: 30px 30px 0 0;
+  margin-top: -35px;
+  background-color: #f6f6f6;
+}
+.menu .menu__nom-restaurant {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.menu .menu__nom-restaurant h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  margin: 20px 30px 0 20px;
+}
+.menu .menu__nom-restaurant i {
+  font-size: 25px;
+}
+.menu .menu__nom-restaurant .plein {
+  opacity: 0;
+}
+.menu .entrees, .menu .plats, .menu .desserts {
+  font-family: "Roboto", sans-serif;
+  width: 95%;
+}
+.menu .entrees .title h2, .menu .plats .title h2, .menu .desserts .title h2 {
+  font-size: 18px;
+  font-weight: 200;
+  margin-bottom: 5px;
+}
+.menu .entrees .title .underline, .menu .plats .title .underline, .menu .desserts .title .underline {
+  background-color: #99E2D0;
+  width: 45px;
+  height: 3px;
+}
+.menu .entrees .menus, .menu .plats .menus, .menu .desserts .menus {
+  display: flex;
+  flex-direction: column;
+}
+.menu .entrees .menus .menus-detailles, .menu .plats .menus .menus-detailles, .menu .desserts .menus .menus-detailles {
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: 70px;
+  margin-top: 20px;
+}
+.menu .entrees .menus .menus-detailles .menus-detailles__name, .menu .plats .menus .menus-detailles .menus-detailles__name, .menu .desserts .menus .menus-detailles .menus-detailles__name {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin: 10px 0px 10px 15px;
+  width: 85%;
+  text-overflow: ellipsis;
+}
+.menu .entrees .menus .menus-detailles .menus-detailles__name h3, .menu .plats .menus .menus-detailles .menus-detailles__name h3, .menu .desserts .menus .menus-detailles .menus-detailles__name h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.menu .entrees .menus .menus-detailles .menus-detailles__name p, .menu .plats .menus .menus-detailles .menus-detailles__name p, .menu .desserts .menus .menus-detailles .menus-detailles__name p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+.menu .entrees .menus .menus-detailles .menus-detailles__price, .menu .plats .menus .menus-detailles .menus-detailles__price, .menu .desserts .menus .menus-detailles .menus-detailles__price {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 35px 15px 15px 0px;
+}
+.menu .entrees .menus .menus-detailles .menus-detailles__slide, .menu .plats .menus .menus-detailles .menus-detailles__slide, .menu .desserts .menus .menus-detailles .menus-detailles__slide {
+  background-color: #99E2D0;
+  width: 15%;
+  border-radius: 0 20px 20px 0;
+  display: none;
+}
+.menu .entrees .menus .menus-detailles .menus-detailles__slide i, .menu .plats .menus .menus-detailles .menus-detailles__slide i, .menu .desserts .menus .menus-detailles .menus-detailles__slide i {
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+.menu .entrees .menus .bouton_de_commande, .menu .plats .menus .bouton_de_commande, .menu .desserts .menus .bouton_de_commande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
