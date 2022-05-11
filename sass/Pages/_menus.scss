@@ -2,8 +2,7 @@
 {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
+    width: auto;
     border-radius: 30px 30px 0 0;
     margin-top: -35px;
     background-color: $couleur_arriere_plan;
@@ -17,7 +16,7 @@
         {
             font-family: $police_titres;
             font-size: 28px;
-            margin: 20px 30px 0 20px;
+            margin: 20px 30px 0 15px;
         }
         i
         {
@@ -31,7 +30,12 @@
     .entrees, .plats, .desserts
     {
         font-family: $police_textes;
-        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10px 25px 10px 10px;
+        flex-wrap: wrap;
+        
         .title
         {
             h2 
@@ -54,24 +58,33 @@
             .menus-detailles
             {
                 @include menus_detailles;
+                overflow: hidden;
+                cursor: pointer;
                 .menus-detailles__name
                 {
                     display: flex;
-                    justify-content: flex-start;
-                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: flex-start;
                     flex-direction: column;
-                    margin: 10px 0px 10px 15px;
-                    width: 85%;
-                    text-overflow: ellipsis;
+                    margin-left: 15px;
+                    width: 80%;
                     h3 
                     {
                         margin: 0;
                         font-size: 16px;
+                        width: 250px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
                     }
                     p 
                     {
-                        margin-top: 5px;
+                        width: 280px;
+                        margin-top: 8px;
                         font-size: 15px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
                     }
                 }
                 .menus-detailles__price
@@ -84,24 +97,22 @@
                 .menus-detailles__slide
                 {
                     @include checkbox;
-                    display: none;
+                    margin-right: -60px;
+                    
+                    
                     i 
                     {
                         @include icone_checkbox;
                     }
                 }
-                .menus-detailles__slide:active
-                {
-                    @include checkbox;
-                }
-            }
-            .bouton_de_commande
-            {
-              display: flex;
-              justify-content: center;
-              align-items: center; 
-              margin-top: 30px;
-            }
+            }  
         }
     }
 }
+.bouton_de_commande
+        {
+          display: flex;
+          justify-content: center;
+          align-items: center; 
+          background-color:$couleur_arriere_plan;
+        }
