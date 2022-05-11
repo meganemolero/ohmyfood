@@ -1,8 +1,20 @@
 .explorer__reservation button
 {
-    @include buttons
+    @include buttons;
     a 
     {
-       @include buttons_a
+       @include buttons_a;
+    }
+}
+
+.bouton_de_commande button
+{
+    @include buttons;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    a 
+    {
+        @include buttons_a;
     }
 }
