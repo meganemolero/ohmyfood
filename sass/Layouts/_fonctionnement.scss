@@ -25,6 +25,7 @@
             max-width: 470px;
             align-items: baseline;
             border-radius: 20px;
+            cursor: pointer;
             p 
             {
                 font-weight: 700;
@@ -44,7 +45,7 @@
                 margin-right: -13px;
                 position: relative;
             }
-            .symbole_et_intitulé 
+            .symbole_et_intitule 
             {
                 background-color: #f6f6f6;
                 display: flex;
@@ -61,7 +62,7 @@
                     font-size: 18px;
                 }
             }
-            .symbole_et_intitulé:hover
+            .symbole_et_intitule:hover
             {
                 background-color: $couleur_hover_fonctionnement;
                 i 
