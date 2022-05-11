@@ -26,8 +26,9 @@
 @mixin checkbox
 {
    background-color: $couleur_tertiaire;
-   width:15%;
-   border-radius: 0 20px 20px 0;
+   width:60px;
+   height:70px;
+   
 }
 @mixin icone_checkbox
 {
