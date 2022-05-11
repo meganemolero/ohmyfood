@@ -18,3 +18,7 @@
         @include buttons_a;
     }
 }
+.explorer__reservation button:hover , .bouton_de_commande button:hover
+{
+   @include button_hover;
+}
