@@ -10,6 +10,19 @@
    margin-bottom: 60px;
    box-shadow: 0 0 16px grey;
 }
+@mixin button_hover
+{
+   background: linear-gradient($couleur_secondaire_claire, $couleur_principale_claire);
+   border:none;
+   border-radius: 30px;
+   padding: 15px 20px 15px 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 60px;
+   box-shadow: 0 0 20px darken($color: grey, $amount: 25%);
+
+}
 @mixin buttons_a
 {  font-size: 15px;
    font-weight: 500;
