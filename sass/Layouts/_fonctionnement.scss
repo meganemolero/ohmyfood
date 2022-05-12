@@ -29,12 +29,12 @@
             align-items: baseline;
             border-radius: 20px;
             cursor: pointer;
-            @media screen and(min-width:768px)
+            @media screen and(min-width:769px)
             {
                 justify-content: space-around;
-                flex-direction: row;
-                width: 32%;
                 margin-left: 10px;
+                flex-direction: 32%;
+                width: 32%;
             }
             p 
             {
