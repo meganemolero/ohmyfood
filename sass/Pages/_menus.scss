@@ -32,12 +32,15 @@
         font-family: $police_textes;
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
-        margin: 10px 25px 10px 10px;
-        flex-wrap: wrap;
+        margin-left: 20px;
+        width: 85%;
+        min-width: 350;
         
         .title
         {
+            margin-left: 10px;
             h2 
             {
             font-size: 18px;
@@ -55,6 +58,8 @@
         {
             display: flex;
             flex-direction: column;
+            width: 100%;
+            margin:auto;
             .menus-detailles
             {
                 @include menus_detailles;
@@ -79,7 +84,7 @@
                     }
                     p 
                     {
-                        width: 280px;
+                        width: 230px;
                         margin-top: 8px;
                         font-size: 15px;
                         text-overflow: ellipsis;
