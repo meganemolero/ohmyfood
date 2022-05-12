@@ -10,6 +10,10 @@
         font-size: 23px;
         padding-left: 15px;
         font-weight: bold;
+        @media screen and(min-width:769px)
+        {
+            text-align: center;
+        }
     }
     .fonctionnement__selecteurs
     {
