@@ -24,7 +24,8 @@
         }
         .plein
         {
-            opacity:0;
+            opacity:1;
+            @include coeur_plein;
         }   
     }
     .entrees, .plats, .desserts
