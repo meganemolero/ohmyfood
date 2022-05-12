@@ -33,7 +33,9 @@
 }
 @mixin coeur_plein
 {
-   background-color: linear-gradient($couleur_principale,$couleur_secondaire);
+   background: linear-gradient($couleur_principale,$couleur_secondaire);
+   background-clip: text;
+   color: transparent;
    border: none;
 }
 @mixin checkbox
@@ -61,6 +63,10 @@
    border-radius: 20px;
    height: 70px;
    margin-top: 20px;
+   width: 100%;
+   box-shadow: 5px 5px 10px #e7e7e7;
+   
 }
+
 
 
