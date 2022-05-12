@@ -29,6 +29,11 @@
             max-width: 700px;
             height: 16em;
             margin: 0px 0px 15px 0px;
+            @media screen and(min-width:769px)
+            {
+                width: 50%;
+                max-width: none;
+            }
             .differents__restaurants__new
                 {
                     background-color: $couleur_tertiaire;
@@ -95,7 +100,8 @@
                         width: 10%;
                         .plein
                         {
-                            opacity: 0;
+                            opacity: 1;
+                            @include coeur_plein;
                         }
                     }    
                         
@@ -104,7 +110,7 @@
                         
                     
                 }   
-            }
+            }   
         }
     }
 }
