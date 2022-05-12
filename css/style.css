@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -93,7 +92,8 @@ header .explorer .explorer__reservation p {
 
 body {
   width: 100%;
-  margin: 0;
+  margin: auto;
+  max-width: 1280px;
 }
 body main {
   display: flex;
@@ -136,6 +136,7 @@ body main {
   max-width: 470px;
   align-items: baseline;
   border-radius: 20px;
+  cursor: pointer;
 }
 .fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action p {
   font-weight: 700;
@@ -154,7 +155,7 @@ body main {
   margin-right: -13px;
   position: relative;
 }
-.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé {
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitule {
   background-color: #f6f6f6;
   display: flex;
   width: 90%;
@@ -164,15 +165,15 @@ body main {
   box-shadow: 5px 5px 10px #e7e7e7;
   padding: 15px 20px 15px 0px;
 }
-.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé i {
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitule i {
   color: #7e7e7e;
   margin: 0 20px 0 30px;
   font-size: 18px;
 }
-.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé:hover {
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitule:hover {
   background-color: #f5edff;
 }
-.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitulé:hover i {
+.fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action .symbole_et_intitule:hover i {
   color: #9356DC;
 }
 
@@ -206,6 +207,9 @@ body main {
   align-items: center;
   margin-bottom: 60px;
   box-shadow: 0 0 16px grey;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 .bouton_de_commande button a {
   font-size: 15px;
@@ -214,6 +218,18 @@ body main {
   text-decoration: none;
   display: flex;
   justify-content: center;
+}
+
+.explorer__reservation button:hover, .bouton_de_commande button:hover {
+  background: linear-gradient(#FF86DE, #B286E6);
+  border: none;
+  border-radius: 30px;
+  padding: 15px 20px 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  box-shadow: 0 0 20px #404040;
 }
 
 #restaurants {
@@ -249,7 +265,8 @@ body main {
   font-weight: 600;
   border-radius: 5px;
   position: absolute;
-  align-self: flex-start;
+  margin-top: 30px;
+  display: flex;
 }
 #restaurants .differents__restaurants a figure {
   display: flex;
@@ -343,8 +360,7 @@ body main {
 .menu {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
+  width: auto;
   border-radius: 30px 30px 0 0;
   margin-top: -35px;
   background-color: #f6f6f6;
@@ -358,7 +374,7 @@ body main {
 .menu .menu__nom-restaurant h1 {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
-  margin: 20px 30px 0 20px;
+  margin: 20px 30px 0 15px;
 }
 .menu .menu__nom-restaurant i {
   font-size: 25px;
@@ -368,7 +384,11 @@ body main {
 }
 .menu .entrees, .menu .plats, .menu .desserts {
   font-family: "Roboto", sans-serif;
-  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 25px 10px 10px;
+  flex-wrap: wrap;
 }
 .menu .entrees .title h2, .menu .plats .title h2, .menu .desserts .title h2 {
   font-size: 18px;
@@ -386,29 +406,38 @@ body main {
 }
 .menu .entrees .menus .menus-detailles, .menu .plats .menus .menus-detailles, .menu .desserts .menus .menus-detailles {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   border-radius: 20px;
-  width: 100%;
-  max-width: 600px;
   height: 70px;
   margin-top: 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__name, .menu .plats .menus .menus-detailles .menus-detailles__name, .menu .desserts .menus .menus-detailles .menus-detailles__name {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  margin: 10px 0px 10px 15px;
-  width: 85%;
-  text-overflow: ellipsis;
+  margin-left: 15px;
+  width: 80%;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__name h3, .menu .plats .menus .menus-detailles .menus-detailles__name h3, .menu .desserts .menus .menus-detailles .menus-detailles__name h3 {
   margin: 0;
   font-size: 16px;
+  width: 250px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__name p, .menu .plats .menus .menus-detailles .menus-detailles__name p, .menu .desserts .menus .menus-detailles .menus-detailles__name p {
-  margin-top: 5px;
+  width: 280px;
+  margin-top: 8px;
   font-size: 15px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__price, .menu .plats .menus .menus-detailles .menus-detailles__price, .menu .desserts .menus .menus-detailles .menus-detailles__price {
   width: 15%;
@@ -418,9 +447,9 @@ body main {
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__slide, .menu .plats .menus .menus-detailles .menus-detailles__slide, .menu .desserts .menus .menus-detailles .menus-detailles__slide {
   background-color: #99E2D0;
-  width: 15%;
-  border-radius: 0 20px 20px 0;
-  display: none;
+  width: 60px;
+  height: 70px;
+  margin-right: -60px;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__slide i, .menu .plats .menus .menus-detailles .menus-detailles__slide i, .menu .desserts .menus .menus-detailles .menus-detailles__slide i {
   background-color: transparent;
@@ -430,9 +459,10 @@ body main {
   justify-content: center;
   padding: 25px;
 }
-.menu .entrees .menus .bouton_de_commande, .menu .plats .menus .bouton_de_commande, .menu .desserts .menus .bouton_de_commande {
+
+.bouton_de_commande {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+  background-color: #f6f6f6;
 }
