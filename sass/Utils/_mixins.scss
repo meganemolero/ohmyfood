@@ -55,10 +55,10 @@
 @mixin menus_detailles
 {
    display: flex;
+   justify-content: center;
+   align-items: center;
    background-color: white;
    border-radius: 20px;
-   width: 100%;
-   max-width: 600px;
    height: 70px;
    margin-top: 20px;
 }
