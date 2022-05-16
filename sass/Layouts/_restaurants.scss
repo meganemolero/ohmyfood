@@ -106,9 +106,10 @@
                         margin-left: -30px;
                         .plein
                         {
-                            opacity: 0;
+                            opacity: 1;
                             @include coeur_plein;
-                            margin-left: -24.5px;
+                            margin-left: -25px;
+                            position: absolute;
                         }
                     }    
                         
