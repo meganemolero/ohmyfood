@@ -9,23 +9,31 @@
     .menu__nom-restaurant
     {
         display: flex;
-        width: 100%;
+        width: 98%;
         align-items: baseline;
         justify-content: space-between;
+        padding-right: 20px;
+        
         h1 
         {
             font-family: $police_titres;
             font-size: 28px;
-            margin: 20px 30px 0 15px;
+            margin: 20px 20px 20px 15px;
         }
         i
         {
-          font-size: 25px;  
+            
+            font-size: 25px;
+            margin-right: 10px;  
+            
         }
         .plein
         {
-            opacity:1;
+            opacity:0;
             @include coeur_plein;
+            margin-left: -35px;
+            position: absolute;
+            
         }   
     }
     .entrees, .plats, .desserts
@@ -34,7 +42,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin-left: 5px;
+        margin:0 0 20px 5px;
         width: 95%;
         min-width: 340px;
         @media screen and (min-width:769px)
@@ -96,6 +104,7 @@
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
+                        color: #787878;
                     }
                 }
                 .menus-detailles__price
