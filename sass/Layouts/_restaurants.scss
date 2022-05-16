@@ -10,6 +10,7 @@
     {
         font-size: 23px;
         padding-left: 20px;
+        margin: 20px 0 10px 0;
         @media screen and(min-width:769px)
         {
             text-align: center;
@@ -31,19 +32,10 @@
             margin: 0px 0px 15px 0px;
             @media screen and(min-width:769px)
             {
-                width: 50%;
+                width: 45%;
+                margin:20px;
                 max-width: none;
             }
-            .differents__restaurants__new
-                {
-                    background-color: $couleur_tertiaire;
-                    padding: 8px 13px;
-                    color: #088c6c;
-                    font-weight: 600;
-                    border-radius: 5px;
-                    position: absolute;
-                    margin-top: 25px;  
-                }
             figure 
             {
                 display: flex;
@@ -52,7 +44,22 @@
                 align-items: center;
                 border-radius: 30px;
                 width: 100%;
-                
+                .differents__restaurants__new
+                {
+                    background-color: $couleur_tertiaire;
+                    padding: 8px 13px;
+                    color: #088c6c;
+                    font-weight: 600;
+                    border-radius: 5px;
+                    position: absolute;
+                    margin-top: -180px;
+                    margin-left: 65%;
+                    @media screen and(min-width:769px)
+                    {
+                        position: absolute;
+                        margin-left: 28%;
+                    }
+                }
                 img 
                 {
                     width: 100%;
@@ -75,7 +82,7 @@
                         justify-content: flex-start;
                         margin-left: 15px;
                         height: 100%;
-                        width: 90%;
+                        width: 85%;
                         h3 
                         {
                             font-size: 16px;
@@ -95,11 +102,13 @@
                         justify-content: flex-end;
                         align-items: center;
                         font-size: 25px;
-                        width: 10%;
+                        width: 15%;
+                        margin-left: -30px;
                         .plein
                         {
                             opacity: 1;
                             @include coeur_plein;
+                            margin-left: -24.5px;
                         }
                     }    
                         
