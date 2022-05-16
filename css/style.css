@@ -10,22 +10,33 @@
   background-color: #353535;
   color: white;
 }
+@media screen and (min-width: 769px) {
+  .footer__contain {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .footer__contain h4 {
   font-family: "Shrikhand", cursive;
   font-size: 25px;
   margin: 20px 0 5px 30px;
 }
+@media screen and (min-width: 769px) {
+  .footer__contain h4 {
+    margin-left: -100px;
+  }
+}
 .footer__contain .footer__contain__list {
   list-style-type: none;
   font-family: "Roboto", sans-serif;
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .footer__contain .footer__contain__list a {
   text-decoration: none;
   color: white;
-  margin-right: 80px;
+  margin-right: 100px;
 }
 .footer__contain .footer__contain__list .footer__logo {
   margin-right: 10px;
@@ -123,20 +134,32 @@ body main {
   padding-left: 15px;
   font-weight: bold;
 }
+@media screen and (min-width: 769px) {
+  .fonctionnement h2 {
+    text-align: center;
+  }
+}
 .fonctionnement .fonctionnement__selecteurs {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action {
   display: flex;
   padding: 10px;
   width: 100%;
-  max-width: 470px;
   align-items: baseline;
   border-radius: 20px;
   cursor: pointer;
+}
+@media screen and (min-width: 769px) {
+  .fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action {
+    justify-content: space-around;
+    margin-left: 10px;
+    flex-direction: 32%;
+    width: 32%;
+  }
 }
 .fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action p {
   font-weight: 700;
@@ -244,6 +267,11 @@ body main {
   font-size: 23px;
   padding-left: 20px;
 }
+@media screen and (min-width: 769px) {
+  #restaurants h2 {
+    text-align: center;
+  }
+}
 #restaurants .differents__restaurants {
   display: flex;
   flex-wrap: wrap;
@@ -258,6 +286,12 @@ body main {
   height: 16em;
   margin: 0px 0px 15px 0px;
 }
+@media screen and (min-width: 769px) {
+  #restaurants .differents__restaurants a {
+    width: 50%;
+    max-width: none;
+  }
+}
 #restaurants .differents__restaurants a .differents__restaurants__new {
   background-color: #99E2D0;
   padding: 8px 13px;
@@ -265,8 +299,7 @@ body main {
   font-weight: 600;
   border-radius: 5px;
   position: absolute;
-  margin-top: 30px;
-  display: flex;
+  margin-top: 25px;
 }
 #restaurants .differents__restaurants a figure {
   display: flex;
@@ -317,7 +350,12 @@ body main {
   width: 10%;
 }
 #restaurants .differents__restaurants a figure figcaption .cartes__restaurants__like .plein {
-  opacity: 0;
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  border: none;
 }
 
 .menus {
@@ -380,15 +418,31 @@ body main {
   font-size: 25px;
 }
 .menu .menu__nom-restaurant .plein {
-  opacity: 0;
+  opacity: 1;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  border: none;
 }
 .menu .entrees, .menu .plats, .menu .desserts {
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 10px 25px 10px 10px;
-  flex-wrap: wrap;
+  margin-left: 5px;
+  width: 95%;
+  min-width: 340px;
+}
+@media screen and (min-width: 769px) {
+  .menu .entrees, .menu .plats, .menu .desserts {
+    width: 30%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+}
+.menu .entrees .title, .menu .plats .title, .menu .desserts .title {
+  margin-left: 20px;
 }
 .menu .entrees .title h2, .menu .plats .title h2, .menu .desserts .title h2 {
   font-size: 18px;
@@ -403,6 +457,8 @@ body main {
 .menu .entrees .menus, .menu .plats .menus, .menu .desserts .menus {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-left: 10px;
 }
 .menu .entrees .menus .menus-detailles, .menu .plats .menus .menus-detailles, .menu .desserts .menus .menus-detailles {
   display: flex;
@@ -412,6 +468,8 @@ body main {
   border-radius: 20px;
   height: 70px;
   margin-top: 20px;
+  width: 100%;
+  box-shadow: 5px 5px 10px #e7e7e7;
   overflow: hidden;
   cursor: pointer;
 }
@@ -432,7 +490,7 @@ body main {
   white-space: nowrap;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__name p, .menu .plats .menus .menus-detailles .menus-detailles__name p, .menu .desserts .menus .menus-detailles .menus-detailles__name p {
-  width: 280px;
+  width: 230px;
   margin-top: 8px;
   font-size: 15px;
   text-overflow: ellipsis;
@@ -449,7 +507,7 @@ body main {
   background-color: #99E2D0;
   width: 60px;
   height: 70px;
-  margin-right: -60px;
+  margin-right: -67px;
 }
 .menu .entrees .menus .menus-detailles .menus-detailles__slide i, .menu .plats .menus .menus-detailles .menus-detailles__slide i, .menu .desserts .menus .menus-detailles .menus-detailles__slide i {
   background-color: transparent;
