@@ -1,10 +1,11 @@
+
 .footer__contain
     {
         display: flex;
         flex-direction: column;
         background-color: #353535;
         color: white;
-        margin: 10px 0 10px 0;
+        
         @media screen and (min-width: 769px)
         {
             justify-content: center;
