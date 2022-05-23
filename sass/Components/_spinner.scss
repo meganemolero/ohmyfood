@@ -1,0 +1,42 @@
+.loading_spinner
+    {
+        margin: auto;
+        position: absolute;
+        top: 0; 
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border-top:  $couleur_principale 5px solid;
+        border-right: $couleur_principale_claire 5px solid;
+        border-bottom:$couleur_secondaire 5px solid;
+        border-left: $couleur_secondaire_claire 5px solid;
+        border-radius: 50%;
+        animation: rotation_loader 1.5s linear infinite;
+        animation-delay: 0s;
+        @keyframes rotation_loader 
+        {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg)
+            }
+        }
+        .loading_spinner_text
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px;
+            font-family: $police_titres;
+            font-size: 20px;
+            background: linear-gradient($couleur_principale,$couleur_secondaire);
+            background-clip: text;
+            color: transparent;
+            border: none;
+        }
+    }
