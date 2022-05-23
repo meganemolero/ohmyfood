@@ -105,23 +105,18 @@
                         width: 15%;
                         margin-left: -30px;
                         .plein
-                        {
-                            opacity: 0;
-                            @include coeur_plein;
-                            margin-left: -25px;
-                            position: absolute;
-                            transition: opacity 1s;
-                        }
-                        .plein:hover
-                        {
-                            opacity: 1;
-                        }
-                    }    
-                        
-
-                        
-                        
-                    
+                            {
+                                opacity: 0;
+                                @include coeur_plein;
+                                margin-left: -25px;
+                                position: absolute;
+                                transition: opacity 1s;
+                            }
+                            .plein:active
+                            {
+                                opacity: 1;
+                            }   
+                    }        
                 }   
             }   
         }
