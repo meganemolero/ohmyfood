@@ -44,6 +44,14 @@
             {
                 margin-bottom: 20px;
             }
+            &:hover 
+            {
+                background-color: $couleur_hover_fonctionnement;
+                i 
+                {
+                    color:$couleur_principale;
+                }
+            }
             .numerotation
             {
                 background-color: $couleur_principale;
@@ -74,16 +82,6 @@
                 margin-left: -10px;
                 
             }
-            .fonctionnement__selecteurs__action:hover
-            {
-                background-color: $couleur_hover_fonctionnement;
-                i 
-                {
-                    color:$couleur_principale;
-                }
-            }
-            
-                
-        }
+        }    
     }
 }
