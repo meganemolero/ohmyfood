@@ -98,6 +98,37 @@
                     }
                     
                 }
+                &:hover .menus-detailles__slide
+                {
+                    animation: slide 1s both;
+                    @keyframes slide 
+                    {
+                        from
+                        {
+                            transform: translateX(0px);
+                        }
+                        to
+                        {
+                            transform: translateX(-60px);
+                        }
+                    }
+                }
+                &:hover .menus-detailles__slide i 
+                {
+                    animation: check 1s both;
+                    @keyframes check
+                    {
+                        0% 
+                        {
+                            transform: rotate(-360deg);
+                        }
+                        100%
+                        {
+                            transform: rotate(0deg);
+                        }
+
+                    }
+                }
                 .menus-detailles__name
                 {
                     display: flex;
@@ -105,7 +136,7 @@
                     align-items: flex-start;
                     flex-direction: column;
                     margin-left: 15px;
-                    width: 90%;
+                    
                     
                     h3 
                     {
@@ -129,10 +160,11 @@
                 }
                 .menus-detailles__price
                 {
-                    width: 10%;
+                    
                     display: flex;
                     justify-content: flex-end;
-                    margin: 35px 20px 15px 0px;
+                    margin: 35px 0px 15px 40px;
+                    
                 }
                 .menus-detailles__slide
                 {
