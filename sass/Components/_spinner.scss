@@ -1,11 +1,31 @@
+.loader 
+{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    max-width: 1280px;
+    height: 100%;
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,0.8);
+    animation: loader 3s forwards;
+    @keyframes loader
+    {
+      0%
+      {
+          opacity:1;
+          
+      } 
+      100%
+      {
+          opacity: 0;
+      } 
+    }
+}
 .loading_spinner
     {
-        margin: auto;
-        position: absolute;
-        top: 0; 
-        bottom: 0;
-        right: 0;
-        left: 0;
         width: 200px;
         height: 200px;
         border-top:  $couleur_principale 5px solid;
@@ -14,7 +34,6 @@
         border-left: $couleur_secondaire_claire 5px solid;
         border-radius: 50%;
         animation: rotation_loader 1.5s linear infinite;
-        animation-delay: 0s;
         @keyframes rotation_loader 
         {
             0%
