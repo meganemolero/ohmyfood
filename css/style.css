@@ -112,26 +112,6 @@ body {
   width: 100%;
   margin: auto;
   max-width: 1280px;
-  -webkit-animation: apparition_menu 3s both;
-          animation: apparition_menu 3s both;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-@-webkit-keyframes apparition_menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes apparition_menu {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 body main {
   display: flex;
@@ -188,7 +168,7 @@ body main {
 @media screen and (min-width: 769px) {
   .fonctionnement .fonctionnement__selecteurs .fonctionnement__selecteurs__action {
     margin-left: 10px;
-    flex-direction: 32%;
+    flex-direction: row;
     width: 30%;
   }
 }
@@ -398,10 +378,26 @@ body main {
   border: none;
   margin-left: -25px;
   position: absolute;
-  transition: opacity 1s;
 }
 #restaurants .differents__restaurants a figure figcaption .cartes__restaurants__like .plein:active {
-  opacity: 1;
+  -webkit-animation: heart 1s ease forwards;
+          animation: heart 1s ease forwards;
+}
+@-webkit-keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .menus {
@@ -475,10 +471,18 @@ body main {
   border: none;
   margin-left: -35px;
   position: absolute;
-  transition: opacity 2s;
 }
 .menu .menu__nom-restaurant .plein:hover {
-  opacity: 1;
+  -webkit-animation: heart 1s ease forwards;
+          animation: heart 1s ease forwards;
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .menu .entrees, .menu .plats, .menu .desserts {
   font-family: "Roboto", sans-serif;
@@ -494,6 +498,9 @@ body main {
     width: 30%;
     margin-right: 20px;
     margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
   }
 }
 .menu .entrees .title, .menu .plats .title, .menu .desserts .title {
@@ -530,6 +537,16 @@ body main {
   -webkit-animation: apparition_menu 800ms both;
           animation: apparition_menu 800ms both;
 }
+@-webkit-keyframes apparition_menu {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 @keyframes apparition_menu {
   0% {
     transform: translateY(20px);
@@ -541,8 +558,8 @@ body main {
   }
 }
 .menu .entrees .menus .menus-detailles1:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles2:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles3:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles4:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles5:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles6:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles7:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles8:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles9:hover .menus-detailles__slide, .menu .entrees .menus .menus-detailles10:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles1:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles2:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles3:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles4:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles5:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles6:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles7:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles8:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles9:hover .menus-detailles__slide, .menu .plats .menus .menus-detailles10:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles1:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles2:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles3:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles4:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles5:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles6:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles7:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles8:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles9:hover .menus-detailles__slide, .menu .desserts .menus .menus-detailles10:hover .menus-detailles__slide {
-  -webkit-animation: slide 1s both;
-          animation: slide 1s both;
+  -webkit-animation: slide 2s forwards;
+          animation: slide 2s forwards;
 }
 @-webkit-keyframes slide {
   from {
@@ -561,8 +578,8 @@ body main {
   }
 }
 .menu .entrees .menus .menus-detailles1:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles2:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles3:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles4:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles5:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles6:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles7:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles8:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles9:hover .menus-detailles__slide i, .menu .entrees .menus .menus-detailles10:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles1:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles2:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles3:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles4:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles5:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles6:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles7:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles8:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles9:hover .menus-detailles__slide i, .menu .plats .menus .menus-detailles10:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles1:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles2:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles3:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles4:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles5:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles6:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles7:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles8:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles9:hover .menus-detailles__slide i, .menu .desserts .menus .menus-detailles10:hover .menus-detailles__slide i {
-  -webkit-animation: check 1s both;
-          animation: check 1s both;
+  -webkit-animation: check 2s forwards;
+          animation: check 2s forwards;
 }
 @-webkit-keyframes check {
   0% {
@@ -580,23 +597,63 @@ body main {
     transform: rotate(0deg);
   }
 }
+.menu .entrees .menus .menus-detailles1:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles2:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles3:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles4:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles5:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles6:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles7:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles8:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles9:hover .menus-detailles__price, .menu .entrees .menus .menus-detailles10:hover .menus-detailles__price, .menu .plats .menus .menus-detailles1:hover .menus-detailles__price, .menu .plats .menus .menus-detailles2:hover .menus-detailles__price, .menu .plats .menus .menus-detailles3:hover .menus-detailles__price, .menu .plats .menus .menus-detailles4:hover .menus-detailles__price, .menu .plats .menus .menus-detailles5:hover .menus-detailles__price, .menu .plats .menus .menus-detailles6:hover .menus-detailles__price, .menu .plats .menus .menus-detailles7:hover .menus-detailles__price, .menu .plats .menus .menus-detailles8:hover .menus-detailles__price, .menu .plats .menus .menus-detailles9:hover .menus-detailles__price, .menu .plats .menus .menus-detailles10:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles1:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles2:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles3:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles4:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles5:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles6:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles7:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles8:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles9:hover .menus-detailles__price, .menu .desserts .menus .menus-detailles10:hover .menus-detailles__price {
+  -webkit-animation: check_price 2s forwards;
+          animation: check_price 2s forwards;
+}
+@-webkit-keyframes check_price {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-60px);
+  }
+}
+@keyframes check_price {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-60px);
+  }
+}
+.menu .entrees .menus .menus-detailles1:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles1 .menus-detailles__name p, .menu .entrees .menus .menus-detailles2:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles2 .menus-detailles__name p, .menu .entrees .menus .menus-detailles3:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles3 .menus-detailles__name p, .menu .entrees .menus .menus-detailles4:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles4 .menus-detailles__name p, .menu .entrees .menus .menus-detailles5:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles5 .menus-detailles__name p, .menu .entrees .menus .menus-detailles6:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles6 .menus-detailles__name p, .menu .entrees .menus .menus-detailles7:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles7 .menus-detailles__name p, .menu .entrees .menus .menus-detailles8:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles8 .menus-detailles__name p, .menu .entrees .menus .menus-detailles9:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles9 .menus-detailles__name p, .menu .entrees .menus .menus-detailles10:hover .menus-detailles__name h3, .menu .entrees .menus .menus-detailles10 .menus-detailles__name p, .menu .plats .menus .menus-detailles1:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles1 .menus-detailles__name p, .menu .plats .menus .menus-detailles2:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles2 .menus-detailles__name p, .menu .plats .menus .menus-detailles3:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles3 .menus-detailles__name p, .menu .plats .menus .menus-detailles4:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles4 .menus-detailles__name p, .menu .plats .menus .menus-detailles5:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles5 .menus-detailles__name p, .menu .plats .menus .menus-detailles6:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles6 .menus-detailles__name p, .menu .plats .menus .menus-detailles7:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles7 .menus-detailles__name p, .menu .plats .menus .menus-detailles8:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles8 .menus-detailles__name p, .menu .plats .menus .menus-detailles9:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles9 .menus-detailles__name p, .menu .plats .menus .menus-detailles10:hover .menus-detailles__name h3, .menu .plats .menus .menus-detailles10 .menus-detailles__name p, .menu .desserts .menus .menus-detailles1:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles1 .menus-detailles__name p, .menu .desserts .menus .menus-detailles2:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles2 .menus-detailles__name p, .menu .desserts .menus .menus-detailles3:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles3 .menus-detailles__name p, .menu .desserts .menus .menus-detailles4:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles4 .menus-detailles__name p, .menu .desserts .menus .menus-detailles5:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles5 .menus-detailles__name p, .menu .desserts .menus .menus-detailles6:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles6 .menus-detailles__name p, .menu .desserts .menus .menus-detailles7:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles7 .menus-detailles__name p, .menu .desserts .menus .menus-detailles8:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles8 .menus-detailles__name p, .menu .desserts .menus .menus-detailles9:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles9 .menus-detailles__name p, .menu .desserts .menus .menus-detailles10:hover .menus-detailles__name h3, .menu .desserts .menus .menus-detailles10 .menus-detailles__name p {
+  -webkit-animation: check_name 3s forwards;
+          animation: check_name 3s forwards;
+}
+@-webkit-keyframes check_name {
+  0% {
+    width: 270px;
+  }
+  100% {
+    width: 210px;
+  }
+}
+@keyframes check_name {
+  0% {
+    width: 270px;
+  }
+  100% {
+    width: 210px;
+  }
+}
 .menu .entrees .menus .menus-detailles1 .menus-detailles__name, .menu .entrees .menus .menus-detailles2 .menus-detailles__name, .menu .entrees .menus .menus-detailles3 .menus-detailles__name, .menu .entrees .menus .menus-detailles4 .menus-detailles__name, .menu .entrees .menus .menus-detailles5 .menus-detailles__name, .menu .entrees .menus .menus-detailles6 .menus-detailles__name, .menu .entrees .menus .menus-detailles7 .menus-detailles__name, .menu .entrees .menus .menus-detailles8 .menus-detailles__name, .menu .entrees .menus .menus-detailles9 .menus-detailles__name, .menu .entrees .menus .menus-detailles10 .menus-detailles__name, .menu .plats .menus .menus-detailles1 .menus-detailles__name, .menu .plats .menus .menus-detailles2 .menus-detailles__name, .menu .plats .menus .menus-detailles3 .menus-detailles__name, .menu .plats .menus .menus-detailles4 .menus-detailles__name, .menu .plats .menus .menus-detailles5 .menus-detailles__name, .menu .plats .menus .menus-detailles6 .menus-detailles__name, .menu .plats .menus .menus-detailles7 .menus-detailles__name, .menu .plats .menus .menus-detailles8 .menus-detailles__name, .menu .plats .menus .menus-detailles9 .menus-detailles__name, .menu .plats .menus .menus-detailles10 .menus-detailles__name, .menu .desserts .menus .menus-detailles1 .menus-detailles__name, .menu .desserts .menus .menus-detailles2 .menus-detailles__name, .menu .desserts .menus .menus-detailles3 .menus-detailles__name, .menu .desserts .menus .menus-detailles4 .menus-detailles__name, .menu .desserts .menus .menus-detailles5 .menus-detailles__name, .menu .desserts .menus .menus-detailles6 .menus-detailles__name, .menu .desserts .menus .menus-detailles7 .menus-detailles__name, .menu .desserts .menus .menus-detailles8 .menus-detailles__name, .menu .desserts .menus .menus-detailles9 .menus-detailles__name, .menu .desserts .menus .menus-detailles10 .menus-detailles__name {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .menu .entrees .menus .menus-detailles1 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles2 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles3 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles4 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles5 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles6 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles7 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles8 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles9 .menus-detailles__name h3, .menu .entrees .menus .menus-detailles10 .menus-detailles__name h3, .menu .plats .menus .menus-detailles1 .menus-detailles__name h3, .menu .plats .menus .menus-detailles2 .menus-detailles__name h3, .menu .plats .menus .menus-detailles3 .menus-detailles__name h3, .menu .plats .menus .menus-detailles4 .menus-detailles__name h3, .menu .plats .menus .menus-detailles5 .menus-detailles__name h3, .menu .plats .menus .menus-detailles6 .menus-detailles__name h3, .menu .plats .menus .menus-detailles7 .menus-detailles__name h3, .menu .plats .menus .menus-detailles8 .menus-detailles__name h3, .menu .plats .menus .menus-detailles9 .menus-detailles__name h3, .menu .plats .menus .menus-detailles10 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles1 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles2 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles3 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles4 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles5 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles6 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles7 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles8 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles9 .menus-detailles__name h3, .menu .desserts .menus .menus-detailles10 .menus-detailles__name h3 {
   margin: 0;
   font-size: 16px;
-  width: 250px;
+  width: 270px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 .menu .entrees .menus .menus-detailles1 .menus-detailles__name p, .menu .entrees .menus .menus-detailles2 .menus-detailles__name p, .menu .entrees .menus .menus-detailles3 .menus-detailles__name p, .menu .entrees .menus .menus-detailles4 .menus-detailles__name p, .menu .entrees .menus .menus-detailles5 .menus-detailles__name p, .menu .entrees .menus .menus-detailles6 .menus-detailles__name p, .menu .entrees .menus .menus-detailles7 .menus-detailles__name p, .menu .entrees .menus .menus-detailles8 .menus-detailles__name p, .menu .entrees .menus .menus-detailles9 .menus-detailles__name p, .menu .entrees .menus .menus-detailles10 .menus-detailles__name p, .menu .plats .menus .menus-detailles1 .menus-detailles__name p, .menu .plats .menus .menus-detailles2 .menus-detailles__name p, .menu .plats .menus .menus-detailles3 .menus-detailles__name p, .menu .plats .menus .menus-detailles4 .menus-detailles__name p, .menu .plats .menus .menus-detailles5 .menus-detailles__name p, .menu .plats .menus .menus-detailles6 .menus-detailles__name p, .menu .plats .menus .menus-detailles7 .menus-detailles__name p, .menu .plats .menus .menus-detailles8 .menus-detailles__name p, .menu .plats .menus .menus-detailles9 .menus-detailles__name p, .menu .plats .menus .menus-detailles10 .menus-detailles__name p, .menu .desserts .menus .menus-detailles1 .menus-detailles__name p, .menu .desserts .menus .menus-detailles2 .menus-detailles__name p, .menu .desserts .menus .menus-detailles3 .menus-detailles__name p, .menu .desserts .menus .menus-detailles4 .menus-detailles__name p, .menu .desserts .menus .menus-detailles5 .menus-detailles__name p, .menu .desserts .menus .menus-detailles6 .menus-detailles__name p, .menu .desserts .menus .menus-detailles7 .menus-detailles__name p, .menu .desserts .menus .menus-detailles8 .menus-detailles__name p, .menu .desserts .menus .menus-detailles9 .menus-detailles__name p, .menu .desserts .menus .menus-detailles10 .menus-detailles__name p {
-  width: 230px;
+  width: 270px;
   margin-top: 8px;
   font-size: 15px;
   text-overflow: ellipsis;
@@ -605,9 +662,9 @@ body main {
   color: #787878;
 }
 .menu .entrees .menus .menus-detailles1 .menus-detailles__price, .menu .entrees .menus .menus-detailles2 .menus-detailles__price, .menu .entrees .menus .menus-detailles3 .menus-detailles__price, .menu .entrees .menus .menus-detailles4 .menus-detailles__price, .menu .entrees .menus .menus-detailles5 .menus-detailles__price, .menu .entrees .menus .menus-detailles6 .menus-detailles__price, .menu .entrees .menus .menus-detailles7 .menus-detailles__price, .menu .entrees .menus .menus-detailles8 .menus-detailles__price, .menu .entrees .menus .menus-detailles9 .menus-detailles__price, .menu .entrees .menus .menus-detailles10 .menus-detailles__price, .menu .plats .menus .menus-detailles1 .menus-detailles__price, .menu .plats .menus .menus-detailles2 .menus-detailles__price, .menu .plats .menus .menus-detailles3 .menus-detailles__price, .menu .plats .menus .menus-detailles4 .menus-detailles__price, .menu .plats .menus .menus-detailles5 .menus-detailles__price, .menu .plats .menus .menus-detailles6 .menus-detailles__price, .menu .plats .menus .menus-detailles7 .menus-detailles__price, .menu .plats .menus .menus-detailles8 .menus-detailles__price, .menu .plats .menus .menus-detailles9 .menus-detailles__price, .menu .plats .menus .menus-detailles10 .menus-detailles__price, .menu .desserts .menus .menus-detailles1 .menus-detailles__price, .menu .desserts .menus .menus-detailles2 .menus-detailles__price, .menu .desserts .menus .menus-detailles3 .menus-detailles__price, .menu .desserts .menus .menus-detailles4 .menus-detailles__price, .menu .desserts .menus .menus-detailles5 .menus-detailles__price, .menu .desserts .menus .menus-detailles6 .menus-detailles__price, .menu .desserts .menus .menus-detailles7 .menus-detailles__price, .menu .desserts .menus .menus-detailles8 .menus-detailles__price, .menu .desserts .menus .menus-detailles9 .menus-detailles__price, .menu .desserts .menus .menus-detailles10 .menus-detailles__price {
-  display: flex;
-  justify-content: flex-end;
-  margin: 35px 0px 15px 40px;
+  margin-top: 20px;
+  margin-left: auto;
+  padding-right: 15px;
 }
 .menu .entrees .menus .menus-detailles1 .menus-detailles__slide, .menu .entrees .menus .menus-detailles2 .menus-detailles__slide, .menu .entrees .menus .menus-detailles3 .menus-detailles__slide, .menu .entrees .menus .menus-detailles4 .menus-detailles__slide, .menu .entrees .menus .menus-detailles5 .menus-detailles__slide, .menu .entrees .menus .menus-detailles6 .menus-detailles__slide, .menu .entrees .menus .menus-detailles7 .menus-detailles__slide, .menu .entrees .menus .menus-detailles8 .menus-detailles__slide, .menu .entrees .menus .menus-detailles9 .menus-detailles__slide, .menu .entrees .menus .menus-detailles10 .menus-detailles__slide, .menu .plats .menus .menus-detailles1 .menus-detailles__slide, .menu .plats .menus .menus-detailles2 .menus-detailles__slide, .menu .plats .menus .menus-detailles3 .menus-detailles__slide, .menu .plats .menus .menus-detailles4 .menus-detailles__slide, .menu .plats .menus .menus-detailles5 .menus-detailles__slide, .menu .plats .menus .menus-detailles6 .menus-detailles__slide, .menu .plats .menus .menus-detailles7 .menus-detailles__slide, .menu .plats .menus .menus-detailles8 .menus-detailles__slide, .menu .plats .menus .menus-detailles9 .menus-detailles__slide, .menu .plats .menus .menus-detailles10 .menus-detailles__slide, .menu .desserts .menus .menus-detailles1 .menus-detailles__slide, .menu .desserts .menus .menus-detailles2 .menus-detailles__slide, .menu .desserts .menus .menus-detailles3 .menus-detailles__slide, .menu .desserts .menus .menus-detailles4 .menus-detailles__slide, .menu .desserts .menus .menus-detailles5 .menus-detailles__slide, .menu .desserts .menus .menus-detailles6 .menus-detailles__slide, .menu .desserts .menus .menus-detailles7 .menus-detailles__slide, .menu .desserts .menus .menus-detailles8 .menus-detailles__slide, .menu .desserts .menus .menus-detailles9 .menus-detailles__slide, .menu .desserts .menus .menus-detailles10 .menus-detailles__slide {
   background-color: #99E2D0;
@@ -671,13 +728,38 @@ body main {
   background-color: #f6f6f6;
 }
 
-.loading_spinner {
+.loader {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+  display: none;
   margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-animation: loader 3s forwards;
+          animation: loader 3s forwards;
+}
+@-webkit-keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading_spinner {
   width: 200px;
   height: 200px;
   border-top: #9356DC 5px solid;
@@ -687,8 +769,6 @@ body main {
   border-radius: 50%;
   -webkit-animation: rotation_loader 1.5s linear infinite;
           animation: rotation_loader 1.5s linear infinite;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
 }
 @-webkit-keyframes rotation_loader {
   0% {
