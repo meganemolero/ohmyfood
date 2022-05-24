@@ -734,7 +734,7 @@ body main {
   width: 100%;
   max-width: 1280px;
   height: 100%;
-  display: none;
+  display: flex;
   margin: auto;
   justify-content: center;
   align-items: center;
@@ -748,6 +748,7 @@ body main {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes loader {
@@ -756,6 +757,7 @@ body main {
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 
