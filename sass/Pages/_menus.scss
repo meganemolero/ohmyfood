@@ -33,11 +33,23 @@
             @include coeur_plein;
             margin-left: -35px;
             position: absolute;
-            transition: opacity 2s;
+            
         } 
         .plein:hover
         {
-            opacity: 1;
+            animation: heart 1s ease forwards;
+            @keyframes heart
+            {
+                0%
+                {
+                    opacity: 0;
+                }
+                100%
+                {
+                    opacity: 1;
+                }
+                                    
+            }
         }
     }
     .entrees, .plats, .desserts
@@ -54,6 +66,9 @@
             width:30%;
             margin-right: 20px;
             margin-left: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: baseline;
         }
         
         .title
@@ -100,7 +115,7 @@
                 }
                 &:hover .menus-detailles__slide
                 {
-                    animation: slide 1s both;
+                    animation: slide 2s forwards;
                     @keyframes slide 
                     {
                         from
@@ -115,7 +130,7 @@
                 }
                 &:hover .menus-detailles__slide i 
                 {
-                    animation: check 1s both;
+                    animation: check 2s forwards;
                     @keyframes check
                     {
                         0% 
@@ -129,27 +144,57 @@
 
                     }
                 }
+                &:hover .menus-detailles__price
+                {
+                    animation: check_price 2s forwards;
+                    @keyframes check_price
+                    {
+                        0%
+                        {
+                            transform: translateX(0px);
+                        }
+                        100%
+                        {
+                            transform: translateX(-60px);
+                        }
+                    }
+                }
+                &:hover .menus-detailles__name h3, .menus-detailles__name p 
+                {
+                    animation: check_name 3s forwards;
+                    @keyframes check_name 
+                    {
+                        0%
+                        {
+                            width: 270px;
+                        }
+                        100%
+                        {
+                            width: 210px;
+                        }
+                    }
+                }
                 .menus-detailles__name
                 {
                     display: flex;
                     justify-content: center;
                     align-items: flex-start;
                     flex-direction: column;
-                    margin-left: 15px;
+                    margin-left: 20px;
                     
                     
                     h3 
                     {
                         margin: 0;
                         font-size: 16px;
-                        width: 250px;
+                        width: 270px;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
                     }
                     p 
                     {
-                        width: 230px;
+                        width: 270px;
                         margin-top: 8px;
                         font-size: 15px;
                         text-overflow: ellipsis;
@@ -161,10 +206,10 @@
                 .menus-detailles__price
                 {
                     
-                    display: flex;
-                    justify-content: flex-end;
-                    margin: 35px 0px 15px 40px;
                     
+                    margin-top: 20px;
+                    margin-left: auto; 
+                    padding-right: 15px;
                 }
                 .menus-detailles__slide
                 {
