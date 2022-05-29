@@ -112,83 +112,6 @@
                     }
                     
                 }
-                &:hover .menus-detailles__slide
-                {
-                    animation: slide 2s forwards;
-                    animation-direction: alternate;
-                    @keyframes slide 
-                    {
-                        from
-                        {
-                            transform: translateX(0px);
-                        }
-                        to
-                        {
-                            transform: translateX(-60px);
-                        }
-                    }
-                }
-                &:hover .menus-detailles__slide i 
-                {
-                    animation: check 2s forwards;
-                    @keyframes check
-                    {
-                        0% 
-                        {
-                            transform: rotate(-360deg);
-                        }
-                        100%
-                        {
-                            transform: rotate(0deg);
-                        }
-
-                    }
-                }
-                &:hover .menus-detailles__price
-                {
-                    animation: check_price 2s forwards;
-                    @keyframes check_price
-                    {
-                        0%
-                        {
-                            transform: translateX(0px);
-                        }
-                        100%
-                        {
-                            transform: translateX(-60px);
-                        }
-                    }
-                }
-                &:hover .menus-detailles__name h3
-                {
-                    animation: check_name_h 1.8s forwards;
-                    @keyframes check_name_h 
-                    {
-                        0%
-                        {
-                            width: 97%;
-                        }
-                        100%
-                        {
-                            width: 75%;
-                        }
-                    }
-                }
-                &:hover .menus-detailles__name p
-                {
-                    animation: check_name_p 1.8s forwards;
-                    @keyframes check_name_p
-                    {
-                        0%
-                        {
-                            width: 97%;
-                        }
-                        100%
-                        {
-                            width: 70%;
-                        }
-                    }
-                }
                 .menus-detailles__name
                 {
                     display: flex;
@@ -197,44 +120,59 @@
                     flex-direction: column;
                     margin-left: 20px;
                     width: 100%;
+                    transition: width 1s;
+                    
                     h3 
                     {
                         margin: 0;
                         padding-right: 0;
                         font-size: 16px;
-                        width: 97%;
                         text-overflow: ellipsis;
                         overflow: hidden;
-                        white-space: nowrap;
+                        white-space: nowrap; 
+                        width: 98%;
                     }
                     p 
                     {
-                        width: 97%;       
+                              
                         margin-top: 8px;
                         font-size: 15px;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
                         color: #787878;
+                        width: 96%;
                     }
                 }
                 .menus-detailles__price
                 {
-                    
-                    
-                    margin-top: 20px;
-                    margin-left: auto; 
+                    margin-top: 20px; 
                     padding-right: 15px;
+                    margin-right: 0;
+                    transition: margin-right 2s;
+                    
+                    
                 }
                 .menus-detailles__slide
                 {
                     @include checkbox;
                     margin-right:-60px;
+                    transition: margin-right 2s;
                     i
                     {
                         @include icone_checkbox;
+                        transition: transform 2s;
                     }
+                } 
+                &:hover .menus-detailles__slide
+                {
+                    margin-right: 0px;
                 }
+                &:hover .menu-detailles__slide i 
+                    {
+                       transform: rotate(180deg);
+                       transform-origin: right;
+                    }              
             }
             .menus-detailles1
             {
