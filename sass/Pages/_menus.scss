@@ -70,7 +70,6 @@
             justify-content: flex-start;
             align-items: baseline;
         }
-        
         .title
         {
             margin-left: 20px;
@@ -116,6 +115,7 @@
                 &:hover .menus-detailles__slide
                 {
                     animation: slide 2s forwards;
+                    animation-direction: alternate;
                     @keyframes slide 
                     {
                         from
@@ -159,18 +159,33 @@
                         }
                     }
                 }
-                &:hover .menus-detailles__name h3, .menus-detailles__name p 
+                &:hover .menus-detailles__name h3
                 {
-                    animation: check_name 3s forwards;
-                    @keyframes check_name 
+                    animation: check_name_h 1.8s forwards;
+                    @keyframes check_name_h 
                     {
                         0%
                         {
-                            width: 270px;
+                            width: 97%;
                         }
                         100%
                         {
-                            width: 210px;
+                            width: 75%;
+                        }
+                    }
+                }
+                &:hover .menus-detailles__name p
+                {
+                    animation: check_name_p 1.8s forwards;
+                    @keyframes check_name_p
+                    {
+                        0%
+                        {
+                            width: 97%;
+                        }
+                        100%
+                        {
+                            width: 70%;
                         }
                     }
                 }
@@ -181,20 +196,20 @@
                     align-items: flex-start;
                     flex-direction: column;
                     margin-left: 20px;
-                    
-                    
+                    width: 100%;
                     h3 
                     {
                         margin: 0;
+                        padding-right: 0;
                         font-size: 16px;
-                        width: 270px;
+                        width: 97%;
                         text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
                     }
                     p 
                     {
-                        width: 270px;
+                        width: 97%;       
                         margin-top: 8px;
                         font-size: 15px;
                         text-overflow: ellipsis;
