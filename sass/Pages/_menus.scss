@@ -119,60 +119,50 @@
                     align-items: flex-start;
                     flex-direction: column;
                     margin-left: 20px;
-                    width: 100%;
-                    transition: width 1s;
-                    
+                    width: 98%; 
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;  
                     h3 
                     {
                         margin: 0;
                         padding-right: 0;
                         font-size: 16px;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap; 
-                        width: 98%;
+                           
                     }
                     p 
-                    {
-                              
+                    {      
                         margin-top: 8px;
                         font-size: 15px;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        white-space: nowrap;
-                        color: #787878;
-                        width: 96%;
+                            
                     }
                 }
                 .menus-detailles__price
                 {
                     margin-top: 20px; 
                     padding-right: 15px;
-                    margin-right: 0;
-                    transition: margin-right 2s;
-                    
-                    
+                    display: flex;
+                    justify-content: flex-end; 
                 }
                 .menus-detailles__slide
                 {
                     @include checkbox;
-                    margin-right:-60px;
-                    transition: margin-right 2s;
+                    margin-right: -60px;
                     i
                     {
                         @include icone_checkbox;
-                        transition: transform 2s;
                     }
                 } 
-                &:hover .menus-detailles__slide
+                &:hover .menus-detailles__name 
                 {
-                    margin-right: 0px;
+                    transition: width 500ms;
+                    width:80%;
                 }
-                &:hover .menu-detailles__slide i 
+                &:hover i 
                     {
-                       transform: rotate(180deg);
-                       transform-origin: right;
-                    }              
+                        transition: transform 2s;
+                        transform: rotate(360deg);
+                    }            
             }
             .menus-detailles1
             {
