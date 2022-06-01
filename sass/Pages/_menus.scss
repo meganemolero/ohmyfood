@@ -119,35 +119,46 @@
                     align-items: flex-start;
                     flex-direction: column;
                     margin-left: 20px;
-                    width: 98%; 
-                    text-overflow: ellipsis;
-                    overflow: hidden;
-                    white-space: nowrap;  
+                    width: 100%;
+                    transition-duration:  800ms;
+                    
+                      
                     h3 
                     {
                         margin: 0;
                         padding-right: 0;
                         font-size: 16px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width:98%;
                            
                     }
                     p 
                     {      
                         margin-top: 8px;
                         font-size: 15px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        width: 98%;
                             
                     }
                 }
                 .menus-detailles__price
                 {
                     margin-top: 20px; 
-                    padding-right: 15px;
+                    padding-right: 16px;
                     display: flex;
-                    justify-content: flex-end; 
+                    justify-content: flex-end;
+                    
                 }
                 .menus-detailles__slide
                 {
                     @include checkbox;
                     margin-right: -60px;
+                    transition-duration: 800ms;
+                    
                     i
                     {
                         @include icone_checkbox;
@@ -155,12 +166,15 @@
                 } 
                 &:hover .menus-detailles__name 
                 {
-                    transition: width 500ms;
-                    width:80%;
+                    width:60%;
+                }
+                &:hover .menus-detailles__slide
+                {
+                    margin-right: 0px;
                 }
                 &:hover i 
                     {
-                        transition: transform 2s;
+                        transition: transform 800ms;
                         transform: rotate(360deg);
                     }            
             }
