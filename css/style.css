@@ -318,6 +318,12 @@ body main {
     margin-left: 28%;
   }
 }
+@media screen and (min-width: 1281px) {
+  #restaurants .differents__restaurants a figure .differents__restaurants__new {
+    position: absolute;
+    margin-left: 24%;
+  }
+}
 #restaurants .differents__restaurants a figure img {
   width: 100%;
   height: 72%;
